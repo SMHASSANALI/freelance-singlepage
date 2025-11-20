@@ -60,7 +60,7 @@ const BannerSlider = () => {
   };
 
   return (
-    <div id="home" className="relative w-full h-[90dvh] md:h-[70dvh] overflow-hidden">
+    <div id="home" className="relative w-full mt-[70px] h-[90dvh] md:h-[70dvh] overflow-hidden">
       <Swiper
         modules={[Autoplay, EffectFade]}
         spaceBetween={0}
@@ -96,7 +96,7 @@ const BannerSlider = () => {
             <div className="absolute inset-0 bg-black/50" />
 
             {/* Animated Content */}
-            <section className="relative z-10 h-full flex flex-col justify-center items-center px-2 md:px-16 max-w-7xl mx-auto text-white">
+            <section className="relative z-10 h-full flex flex-col justify-center items-start px-2 md:px-16 max-w-7xl mx-auto text-white">
               <motion.div
                 className="max-w-4xl space-y-2 md:space-y-8"
                 initial="hidden"

@@ -1,37 +1,167 @@
 "use client";
 
-import React from "react";
-import CircularButton from "./CircularButton";
-import Image from "next/image";
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
-const Banner = () => {
+import Image from "next/image";
+import CircularButton from "./CircularButton";
+import { motion } from "framer-motion";
+
+const BannerSlider = () => {
+  const swiperRef = useRef(null);
+
+  const slides = [
+    {
+      image: "/images/home/banner.jpg",
+      heading: "AYLUX.",
+      subheading: "Global Supply Chain. Done Right.",
+      description:
+        "Australian-headquartered | Strict compliance | Seamless trade in Medical Goods & FMCG between Australia and South Asia.",
+    },
+    {
+      image: "/images/home/banner2.jpg",
+      heading: "Connecting Markets",
+      subheading: "Specialists in Medical & FMCG Trade",
+      description:
+        "Our dynamic FMCG division is dedicated to facilitating the smooth trade of everyday consumer products.",
+    },
+    {
+      image: "/images/home/banner3.jpg",
+      heading: "Your Strategic Trade Partner",
+      subheading: "From Compliance to Delivery",
+      description:
+        "We handle the complexity so you can focus on growth. Medical devices, pharmaceuticals, and FMCG — delivered with trust.",
+    },
+    {
+      image: "/images/home/banner4.jpg",
+      heading: "Elevating Supply Chains",
+      subheading: "Trusted Experts in Medical & FMCG Logistics",
+      description:
+        "With AYLUX, experience a new standard in supply chain management tailored for the Medical and FMCG sectors.",
+    },
+  ];
+
+  // Framer Motion variants
+  const textVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i = 0) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.3,
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    }),
+    exit: { opacity: 0, y: -30, transition: { duration: 0.4 } },
+  };
+
   return (
-    <main className="w-full relative h-[70dvh]">
-      <div className="bg-black/40 inset-0 absolute z-0" />
-      <div className="inset-0 absolute -z-1 h-full w-full">
-        <Image
-          src="/images/home/banner.jpg"
-          alt="banner"
-          width="1920"
-          height="1080"
-          className="w-full h-full object-cover"
-        />
+    <div className="relative w-full h-[70dvh] overflow-hidden">
+      <Swiper
+        modules={[Autoplay, EffectFade]}
+        spaceBetween={0}
+        slidesPerView={1}
+        loop={true}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: false,
+        }}
+        speed={1200}
+        ref={swiperRef}
+        className="h-full"
+        onMouseEnter={() => swiperRef.current?.swiper.autoplay.stop()}
+        onMouseLeave={() => swiperRef.current?.swiper.autoplay.start()}
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <Image
+                src={slide.image}
+                alt={slide.heading}
+                fill
+                priority={index === 0}
+                className="object-cover"
+                quality={95}
+              />
+            </div>
+
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/50" />
+
+            {/* Animated Content */}
+            <section className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 max-w-7xl mx-auto text-white">
+              <motion.div
+                className="max-w-4xl space-y-8"
+                initial="hidden"
+                whileInView="visible"
+                exit="exit"
+                viewport={{ once: false }}
+                key={index} // This forces re-animation on slide change
+              >
+                <motion.h1
+                  custom={0}
+                  variants={textVariants}
+                  className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+                >
+                  {slide.heading}
+                </motion.h1>
+
+                <motion.p
+                  custom={1}
+                  variants={textVariants}
+                  className="text-2xl md:text-3xl font-semibold"
+                >
+                  {slide.subheading}
+                </motion.p>
+
+                <motion.p
+                  custom={2}
+                  variants={textVariants}
+                  className="text-lg md:text-xl max-w-3xl leading-relaxed text-white/90"
+                >
+                  {slide.description}
+                </motion.p>
+
+                <motion.div custom={3} variants={textVariants} className="h-18">
+                  <CircularButton text="Partner with us" />
+                </motion.div>
+              </motion.div>
+            </section>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      {/* Elegant Pagination Dots */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => swiperRef.current?.swiper.slideToLoop(index)}
+            className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white/40 transition-all duration-300 hover:bg-white/80"
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
-      <section className="py-20 flex flex-col w-full max-w-7xl mx-auto gap-6 px-16 text-[#ffffff] z-20 relative ">
-        <h1 className="text-6xl font-bold">AYLUX.</h1>
-        <p className="text-2xl font-semibold max-w-sm">
-          Global Supply Chain. Done Right.
-        </p>
-        <p className="text-lg max-w-2xl">
-          Australian-headquartered | Strict compliance | Seamless trade in
-          Medical Goods & FMCG between Australia and South Asia.
-        </p>
-        <div className="flex flex-row items-center justify-start gap-4 h-18">
-          <CircularButton text={"Partner with us"} />
-        </div>
-      </section>
-    </main>
+
+      {/* Active Dot Indicator via Swiper's built-in class */}
+      <style jsx global>{`
+        .swiper-slide-active .max-w-4xl > * {
+          /* Ensures animation runs only on active slide */
+        }
+        .swiper-pagination-bullet-active {
+          background: white !important;
+          transform: scale(1.5);
+        }
+      `}</style>
+    </div>
   );
 };
 
-export default Banner;
+export default BannerSlider;

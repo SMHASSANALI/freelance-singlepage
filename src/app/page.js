@@ -1,14 +1,17 @@
 import AboutUs from "@/components/AboutUs";
 import Banner from "@/components/Banner";
+import Contact from "@/components/Contact";
 import Explore from "@/components/Explore";
 import InsightsSlider from "@/components/InsightsSlider";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
     <div>
       <Banner />
+      <AboutUs />
       <div className="bg-[#F2F2F2]">
-        <AboutUs />
+        <Services />
       </div>
       <Explore />
       <div className="bg-[#F2F2F2]">
@@ -23,6 +26,7 @@ export default function Home() {
           <div className="w-[220px] h-20 border"></div>
         </div>
       </div>
+      <Contact />
     </div>
   );
 }

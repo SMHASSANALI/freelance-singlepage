@@ -1,6 +1,7 @@
 import { Mulish } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const mulish = Mulish({
   variable: "--font-mulish",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body className={`${mulish.variable} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

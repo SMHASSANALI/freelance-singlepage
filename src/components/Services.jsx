@@ -72,7 +72,7 @@ const Services = () => {
             To be the{" "}
             <span className="text-cyan-600 font-semibold">trusted</span>,{" "}
             <span className="text-cyan-600 font-semibold">reliable</span>, and{" "}
-            <span className="text-cyan-600 font-semibold">efficient link</span>
+            <span className="text-cyan-600 font-semibold">efficient link</span>{" "}
             in the global supply chain, ensuring uninterrupted access to quality
             medical and consumer products across Australia and South Asian
             markets.
@@ -123,20 +123,6 @@ const Services = () => {
             </motion.article>
           ))}
         </motion.div>
-
-        {/* Bottom CTA */}
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-center mt-16 lg:mt-20"
-        >
-          <p className="text-lg text-gray-600 mb-6">
-            Ready to streamline your supply chain?
-          </p>
-          <CircularButton text="Partner with Aylux" />
-        </motion.div> */}
       </div>
     </section>
   );

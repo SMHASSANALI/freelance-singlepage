@@ -80,10 +80,7 @@ const Contact = () => {
                     Whatsapp number (24/7)
                   </p>
                   <p className="text-lg font-medium">
-                    +61 402 432 903{" "}
-                    <span className="text-xs font-light leading-0">
-                      under country one number to all
-                    </span>
+                    +61 402 432 903
                   </p>
                 </div>
               </div>

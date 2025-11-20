@@ -17,7 +17,11 @@ const AboutUs = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   return (
@@ -35,9 +39,10 @@ const AboutUs = () => {
             Our Story & Mission
           </h2>
           <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Welcome to <span className="text-cyan-600 font-semibold">Aylux Pvt Ltd</span> — 
-            a globally connected, Australian-registered import-export powerhouse built on trust, 
-            compliance, and seamless trade.
+            Welcome to{" "}
+            <span className="text-cyan-600 font-semibold">Aylux Pvt Ltd</span> —
+            a globally connected, Australian-registered import-export powerhouse
+            built on trust, compliance, and seamless trade.
           </p>
         </motion.div>
 
@@ -54,9 +59,10 @@ const AboutUs = () => {
               Bridging Continents with Purpose
             </h3>
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
-              Founded in Australia, Aylux was born from a clear vision: to bridge the gap between 
-              high-quality global goods and dynamic, growing consumer markets. We specialize in two 
-              mission-critical sectors — Medical Goods and Fast-Moving Consumer Goods (FMCG) — 
+              Founded in Australia, Aylux was born from a clear vision: to
+              bridge the gap between high-quality global goods and dynamic,
+              growing consumer markets. We specialize in two mission-critical
+              sectors — Medical Goods and Fast-Moving Consumer Goods (FMCG) —
               delivering excellence across Australia and South Asia.
             </p>
           </motion.div>
@@ -70,7 +76,6 @@ const AboutUs = () => {
               alt="Aylux connecting Australia and South Asia"
               fill
               className="object-cover"
-              quality={95}
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-8 left-8 text-white">
@@ -90,9 +95,13 @@ const AboutUs = () => {
         >
           <h3 className="text-3xl lg:text-5xl font-bold mb-6">Our Mission</h3>
           <p className="text-base lg:text-2xl max-w-5xl mx-auto leading-relaxed">
-            To be the <span className="underline decoration-white/50">trusted, reliable, and efficient link</span> 
-            in the global supply chain — ensuring uninterrupted access to quality medical and consumer products 
-            across Australia and South Asian markets.
+            To be the{" "}
+            <span className="underline decoration-white/50">
+              trusted, reliable, and efficient link
+            </span>{" "}
+            in the global supply chain, ensuring uninterrupted access to quality
+            medical and consumer products across Australia and South Asian
+            markets.
           </p>
         </motion.div>
 
@@ -109,18 +118,33 @@ const AboutUs = () => {
             <div className="bg-linear-to-r from-teal-500 to-cyan-600 p-8 text-white">
               <MdHealthAndSafety className="w-16 h-16 mb-4" />
               <h3 className="text-3xl font-bold">Medical Goods</h3>
-              <p className="text-lg opacity-90">Commitment to Health & Compliance</p>
+              <p className="text-lg opacity-90">
+                Commitment to Health & Compliance
+              </p>
             </div>
             <div className="p-8 lg:p-10 space-y-5 text-gray-700">
-              <motion.p variants={itemVariants} className="text-lg leading-relaxed">
-                We understand that lives depend on the reliability of medical supply chains.
+              <motion.p
+                variants={itemVariants}
+                className="text-lg leading-relaxed"
+              >
+                We understand that lives depend on the reliability of medical
+                supply chains.
               </motion.p>
-              <motion.p variants={itemVariants} className="text-lg leading-relaxed">
-                As a dedicated importer into Australia, we source only the highest-quality medical equipment 
-                and supplies — rigorously vetted to meet Australia’s strictest regulatory and safety standards.
+              <motion.p
+                variants={itemVariants}
+                className="text-lg leading-relaxed"
+              >
+                As a dedicated importer into Australia, we source only the
+                highest-quality medical equipment and supplies — rigorously
+                vetted to meet Australia’s strictest regulatory and safety
+                standards.
               </motion.p>
-              <motion.p variants={itemVariants} className="text-lg font-medium text-cyan-600">
-                Our promise: Australian healthcare providers never compromise on access, quality, or compliance.
+              <motion.p
+                variants={itemVariants}
+                className="text-lg font-medium text-cyan-600"
+              >
+                Our promise: Australian healthcare providers never compromise on
+                access, quality, or compliance.
               </motion.p>
             </div>
           </motion.article>
@@ -136,24 +160,35 @@ const AboutUs = () => {
             <div className="bg-linear-to-r from-orange-500 to-pink-600 p-8 text-white">
               <MdLocalShipping className="w-16 h-16 mb-4" />
               <h3 className="text-3xl font-bold">FMCG Division</h3>
-              <p className="text-lg opacity-90">Connecting Markets, Powering Growth</p>
+              <p className="text-lg opacity-90">
+                Connecting Markets, Powering Growth
+              </p>
             </div>
             <div className="p-8 lg:p-10 space-y-6 text-gray-700">
               <motion.div variants={itemVariants}>
-                <h4 className="font-semibold text-xl mb-2 text-gray-900">Importing to Australia</h4>
+                <h4 className="font-semibold text-xl mb-2 text-gray-900">
+                  Importing to Australia
+                </h4>
                 <p className="text-lg leading-relaxed">
-                  We bring diverse, high-demand consumer products from trusted global sources directly 
-                  to Australian retailers and distributors.
+                  We bring diverse, high-demand consumer products from trusted
+                  global sources directly to Australian retailers and
+                  distributors.
                 </p>
               </motion.div>
               <motion.div variants={itemVariants}>
-                <h4 className="font-semibold text-xl mb-2 text-gray-900">Exporting to South Asia</h4>
+                <h4 className="font-semibold text-xl mb-2 text-gray-900">
+                  Exporting to South Asia
+                </h4>
                 <p className="text-lg leading-relaxed">
-                  We open doors for Australian and international FMCG brands into one of the world’s 
-                  fastest-growing consumer regions — with local insight and end-to-end logistics.
+                  We open doors for Australian and international FMCG brands
+                  into one of the world’s fastest-growing consumer regions —
+                  with local insight and end-to-end logistics.
                 </p>
               </motion.div>
-              <motion.p variants={itemVariants} className="text-lg font-medium text-pink-600">
+              <motion.p
+                variants={itemVariants}
+                className="text-lg font-medium text-pink-600"
+              >
                 <FaGlobeAsia className="inline mr-2" />
                 Dual-market mastery. Global trends meet regional opportunity.
               </motion.p>
@@ -173,7 +208,9 @@ const AboutUs = () => {
             <FaHandshake className="text-cyan-600 w-12 h-12" />
             <p>
               At Aylux, we don’t just move products. <br />
-              <span className="text-cyan-600">We build lasting partnerships across continents.</span>
+              <span className="text-cyan-600">
+                We build lasting partnerships across continents.
+              </span>
             </p>
           </div>
         </motion.div>

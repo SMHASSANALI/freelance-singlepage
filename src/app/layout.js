@@ -9,7 +9,7 @@ const mulish = Mulish({
 });
 
 export const metadata = {
-  title: "AYLUX - Global Sourcing & Logistics Solutions",
+  title: "AYLUX | Australia - Asia Trade & Logistics",
   description:
     "Aylux specializes in FMCG sourcing, global logistics, medical goods supply, and Australian market entry services.",
   openGraph: {

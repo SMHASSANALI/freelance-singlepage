@@ -96,7 +96,6 @@ const BannerSlider = () => {
                 fill
                 priority={index === 0}
                 className="object-center object-cover w-full h-full"
-                quality={95}
               />
             </div>
 

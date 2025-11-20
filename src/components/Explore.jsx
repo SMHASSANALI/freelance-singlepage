@@ -1,59 +1,10 @@
-// import React from "react";
-// import ExploreSlider from "./ExploreSlider";
-// import Image from "next/image";
-
-// const Explore = () => {
-//   return (
-//     <div className="max-w-7xl mx-auto py-20 ">
-//       <div className="max-w-3xl mx-auto gap-6 flex flex-col">
-//         <h3 className="text-2xl font-bold">Our Global Footprint</h3>
-//         <p className="font-light text-lg">
-//           Aylux Pvt Ltd operates with a strategic, international presence,
-//           enabling us to provide seamless logistics, local expertise, and
-//           continuous supply.
-//         </p>
-//       </div>
-//       <div className="border w-full py-10 relative h-[70dvh]">
-//         <h5 className="text-3xl font-bold">
-//           Our key operational hubs include:
-//         </h5>
-//         <ul className="list-disc list-inside mt-4">
-//           <li className="text-lg">
-//             Australia <span>(Headquarters) </span>
-//           </li>
-//           <li className="text-lg">Sri Lanka</li>
-//           <li className="text-lg">Malaysia</li>
-//           <li className="text-lg">USA</li>
-//           <li className="text-lg">Canada</li>
-//         </ul>
-//         <div className="border mx-auto absolute inset-0 w-full h-full flex items-center justify-center">
-//           <Image
-//             src="/images/about/globe.jpg"
-//             alt="map"
-//             className="object-fill"
-//             width={400}
-//             height={400}
-//           />
-//         </div>
-//         <p className="max-w-lg border ml-auto  ">
-//           This network ensures we are local on a global scale, providing
-//           boots-on-the-ground support and cultural understanding in every market
-//           we serve.
-//         </p>
-//       </div>
-//       <ExploreSlider />
-//     </div>
-//   );
-// };
-
-// export default Explore;
-
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ExploreSlider from "./ExploreSlider";
+import { MdWhatsapp } from "react-icons/md";
 
 const Explore = () => {
   const locations = [
@@ -95,7 +46,6 @@ const Explore = () => {
               alt="Aylux Global Network - Australia & Asia Pacific Focus"
               fill
               className="object-cover opacity-90"
-              quality={95}
               priority
             />
             <div className="absolute inset-0 bg-linear-to-t from-teal-500 via-cyan-600 to-transparent" />
@@ -111,6 +61,19 @@ const Explore = () => {
               support, cultural understanding, and real-time responsiveness — no
               matter where in the world you are.
             </p>
+            <div className="mt-4 w-fit">
+              <div className="flex flex-row items-center justify-center">
+                <span className="bg-white rounded-full p-1.5 mr-2 shadow-lg flex items-center justify-center">
+                  <MdWhatsapp className="w-8 h-8 text-green-500" />
+                </span>
+                <div>
+                  <p className="text-lg lg:text-xl font-semibold">
+                    +61 400 123 456
+                  </p>
+                  <p className="">24/7 Connectivity</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

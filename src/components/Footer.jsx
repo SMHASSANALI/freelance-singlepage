@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Link } from "react-scroll";
 import { MdFacebook } from "react-icons/md";
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
+import { FaInstagram, FaLinkedinIn, FaTiktok } from "react-icons/fa6";
 
 const Footer = () => {
   const quickLinks = [
@@ -18,11 +18,24 @@ const Footer = () => {
   const socials = [
     {
       icon: FaLinkedinIn,
-      href: "https://linkedin.com/company/aylux",
+      href: "https://www.linkedin.com/company/aylux-pvt-ltd/about/?viewAsMember=true",
       label: "LinkedIn",
     },
-    { icon: MdFacebook, href: "#", label: "Facebook" },
-    { icon: FaInstagram, href: "#", label: "Instagram" },
+    {
+      icon: MdFacebook,
+      href: "https://www.facebook.com/people/AYLUX-PVT-LTD/61584092127100/",
+      label: "Facebook",
+    },
+    {
+      icon: FaInstagram,
+      href: "https://www.instagram.com/ayluxpvtltd/?igsh=MXZ1NGZiamludHJ0aA%3D%3D#",
+      label: "Instagram",
+    },
+    {
+      icon: FaTiktok,
+      href: "https://www.tiktok.com/@aylux.pvt.ltd?_r=1&_t=ZS-91ZCYHBNszS",
+      label: "TikTok",
+    },
   ];
 
   return (

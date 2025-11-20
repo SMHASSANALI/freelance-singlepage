@@ -60,7 +60,7 @@ const BannerSlider = () => {
   };
 
   return (
-    <div className="relative w-full h-[70dvh] overflow-hidden">
+    <div id="home" className="relative w-full h-[90dvh] md:h-[70dvh] overflow-hidden">
       <Swiper
         modules={[Autoplay, EffectFade]}
         spaceBetween={0}
@@ -96,9 +96,9 @@ const BannerSlider = () => {
             <div className="absolute inset-0 bg-black/50" />
 
             {/* Animated Content */}
-            <section className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 max-w-7xl mx-auto text-white">
+            <section className="relative z-10 h-full flex flex-col justify-center items-center px-2 md:px-16 max-w-7xl mx-auto text-white">
               <motion.div
-                className="max-w-4xl space-y-8"
+                className="max-w-4xl space-y-2 md:space-y-8"
                 initial="hidden"
                 whileInView="visible"
                 exit="exit"
@@ -108,7 +108,7 @@ const BannerSlider = () => {
                 <motion.h1
                   custom={0}
                   variants={textVariants}
-                  className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+                  className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight"
                 >
                   {slide.heading}
                 </motion.h1>
@@ -116,7 +116,7 @@ const BannerSlider = () => {
                 <motion.p
                   custom={1}
                   variants={textVariants}
-                  className="text-2xl md:text-3xl font-semibold"
+                  className="text-xl md:text-3xl font-semibold"
                 >
                   {slide.subheading}
                 </motion.p>
@@ -124,7 +124,7 @@ const BannerSlider = () => {
                 <motion.p
                   custom={2}
                   variants={textVariants}
-                  className="text-lg md:text-xl max-w-3xl leading-relaxed text-white/90"
+                  className="text-base md:text-xl max-w-3xl leading-relaxed text-white/90"
                 >
                   {slide.description}
                 </motion.p>

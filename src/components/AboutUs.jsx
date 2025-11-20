@@ -21,7 +21,7 @@ const AboutUs = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 overflow-hidden">
+    <section id="about" className="py-20 lg:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -89,7 +89,7 @@ const AboutUs = () => {
           className="bg-cyan-600 text-white p-10 lg:p-16 text-center mb-20 shadow-xl"
         >
           <h3 className="text-3xl lg:text-5xl font-bold mb-6">Our Mission</h3>
-          <p className="text-xl lg:text-2xl max-w-5xl mx-auto leading-relaxed">
+          <p className="text-base lg:text-2xl max-w-5xl mx-auto leading-relaxed">
             To be the <span className="underline decoration-white/50">trusted, reliable, and efficient link</span> 
             in the global supply chain — ensuring uninterrupted access to quality medical and consumer products 
             across Australia and South Asian markets.
@@ -169,7 +169,7 @@ const AboutUs = () => {
           transition={{ duration: 0.9 }}
           className="text-center mt-20 lg:mt-28"
         >
-          <div className="inline-flex items-center gap-4 text-2xl lg:text-3xl font-bold text-gray-800">
+          <div className="flex flex-col md:flex-row w-full justify-center items-center gap-4 text-2xl lg:text-3xl font-bold text-gray-800">
             <FaHandshake className="text-cyan-600 w-12 h-12" />
             <p>
               At Aylux, we don’t just move products. <br />

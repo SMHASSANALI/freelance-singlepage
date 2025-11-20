@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-24 lg:py-32 bg-linear-to-br from-cyan-950 via-slate-900 to-black text-white overflow-hidden">
+    <section id="contact" className="py-24 lg:py-32 bg-linear-to-br from-cyan-950 via-slate-900 to-black text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left: Content & Message */}

@@ -8,12 +8,12 @@ const CircularButton = ({ text }) => {
       whileHover="hover"
       whileTap="tap"
       variants={{
-        initial: { borderWidth: "0px" },
+        initial: { borderWidth: "1px" },
         hover: { borderWidth: "2px" },
         tap: { scale: 0.98 },
       }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
-      className="z-10 bg-white rounded-full border-gray-300/10 relative cursor-pointer"
+      className="z-10 bg-white rounded-full border-black relative cursor-pointer"
     >
       <motion.p
         variants={{

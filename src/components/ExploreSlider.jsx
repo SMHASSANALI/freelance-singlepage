@@ -57,7 +57,7 @@ const ExploreSlider = () => {
 
   return (
     <main className="py-10 flex flex-col justify-center">
-      <section className="px-8">
+      <section className="">
         <div className="mb-6">
           <h3 className="text-3xl font-bold text-center md:text-left">
             Why Partner with Aylux?
@@ -77,7 +77,7 @@ const ExploreSlider = () => {
               640: { slidesPerView: 2 },
               1024: { slidesPerView: 2 },
               1200: { slidesPerView: 3 },
-              1300: { slidesPerView: 3.5 },
+              1300: { slidesPerView: 4 },
             }}
             loop={true}
             autoplay={{

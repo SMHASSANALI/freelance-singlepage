@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <div>
       <Banner />
-      <div className="bg-[#F2F2F2] border">
+      <div className="bg-[#F2F2F2]">
         <AboutUs />
       </div>
       <Explore />
-      <div className="bg-[#F2F2F2] border">
+      <div className="bg-[#F2F2F2]">
         <InsightsSlider />
       </div>
       <div className="max-w-7xl w-full mx-auto flex flex-col gap-6 items-center justify-center py-20">

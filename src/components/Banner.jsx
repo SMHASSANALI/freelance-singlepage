@@ -16,6 +16,14 @@ const BannerSlider = () => {
 
   const slides = [
     {
+      image: "/images/home/medical.jpg",
+      heading: "Aylux",
+      subheading: "Medical Goods Importation and Supply Chain.",
+      description:
+        "Protecting Health. Reliable Supply of Essential Medical Goods.",
+      alt: "Hands putting on medical gloves",
+    },
+    {
       image: "/images/home/spoons.jpg",
       heading: "Aylux",
       subheading: "FMCG Sourcing and Import/Export (Food & Groceries)",
@@ -30,14 +38,6 @@ const BannerSlider = () => {
       description:
         "Your Assurance in Global Trade. Seamless Logistics, Worldwide.",
       alt: "Global Map with Planes, Ships, and Trucks",
-    },
-    {
-      image: "/images/home/medical.jpg",
-      heading: "Aylux",
-      subheading: "Medical Goods Importation and Supply Chain.",
-      description:
-        "Protecting Health. Reliable Supply of Essential Medical Goods.",
-      alt: "Hands putting on medical gloves",
     },
     {
       image: "/images/home/FMCG.jpg",
@@ -67,7 +67,7 @@ const BannerSlider = () => {
   return (
     <div
       id="home"
-      className="relative w-full mt-[70px] h-[400px] md:h-[1000px] overflow-hidden"
+      className="relative w-full mt-[70px] h-[400px] md:h-[800px] overflow-hidden"
     >
       <Swiper
         modules={[Autoplay, EffectFade]}
